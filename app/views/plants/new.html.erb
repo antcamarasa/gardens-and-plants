@@ -1,0 +1,11 @@
+<%# if not NESTED  -> @plant %>
+<%# simple_form_for @plant do |f| %>
+
+<%# If NESTED -> [@parent, @child] %>
+<div class="container">
+  <%= simple_form_for [@garden, @plant] do |f|%>
+    <%= f.input :name %>
+    <%= f.input :photo_url %>
+    <%= f.submit class: 'btn btn-primary' %>
+  <% end%>
+</div>
